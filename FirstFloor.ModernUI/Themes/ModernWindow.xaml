@@ -14,7 +14,7 @@
         <!--<Setter Property="FontFamily" Value="/FirstFloor.ModernUI;component/Resources/#iconfont"></Setter>-->
         <Setter Property="BackgroundContent" Value="{DynamicResource WindowBackgroundContent}" />
         <!--<Setter Property="FontFamily" Value="{DynamicResource DefaultFontFamily}" />-->
-        <Setter Property="FontFamily" Value="微软雅黑" />
+        <Setter Property="FontFamily" Value="新宋体" />
         <Setter Property="FontSize" Value="{DynamicResource DefaultFontSize}" />
         <Setter Property="Foreground" Value="{DynamicResource WindowText}" />
         <Setter Property="BorderBrush" Value="{DynamicResource WindowBorder}" />
