@@ -19,7 +19,7 @@
                 <mui:Link DisplayName="Introduction" Source="/Pages/Introduction.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
-        <mui:LinkGroup DisplayName="Layout">
+        <mui:LinkGroup DisplayName="布局">
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="Wireframe" Source="/Pages/LayoutWireframe.xaml" />
                 <mui:Link DisplayName="Basic" Source="/Pages/LayoutBasic.xaml" />
@@ -28,13 +28,13 @@
                 <mui:Link DisplayName="Tab" Source="/Pages/LayoutTab.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
-        <mui:LinkGroup DisplayName="Controls">
+        <mui:LinkGroup DisplayName="控件">
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="Styles" Source="/Pages/ControlsStyles.xaml" />
                 <mui:Link DisplayName="Modern controls" Source="/Pages/ControlsModern.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
-        <mui:LinkGroup DisplayName="Advanced">
+        <mui:LinkGroup DisplayName="先进的(Advanced)">
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="DPI awareness" Source="/Pages/DpiAwareness.xaml" />
                 <mui:Link DisplayName="Navigation" Source="/Pages/Navigation.xaml" />
