@@ -52,16 +52,16 @@ Visit the [url=https://github.com/firstfloorsoftware/mui/wiki]online documentati
                 </mui:BBCodeBlock>
                 
                 <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                    <Button Content="introduction" Margin="0,0,4,0"
+                    <Button Content="简介" Margin="0,0,4,0"
                             Command="mui:LinkCommands.NavigateLink"
                             CommandParameter="/Pages/Introduction.xaml"/>
-                    <Button Content="google" Margin="0,0,4,0"
+                    <Button Content="谷歌" Margin="0,0,4,0"
                             Command="mui:LinkCommands.NavigateLink"
                             CommandParameter="http://www.google.com"/>
-                    <Button Content="dark theme" Margin="0,0,4,0"
+                    <Button Content="黑暗主题" Margin="0,0,4,0"
                             Command="mui:LinkCommands.NavigateLink"
                             CommandParameter="cmd://darktheme" />
-                    <Button Content="custom theme" Margin="0,0,4,0"
+                    <Button Content="自定义主题" Margin="0,0,4,0"
                             Command="mui:LinkCommands.NavigateLink"
                             CommandParameter="cmd://settheme|/ModernUIDemo;component/Assets/ModernUI.HelloKitty.xaml" />
                 </StackPanel>

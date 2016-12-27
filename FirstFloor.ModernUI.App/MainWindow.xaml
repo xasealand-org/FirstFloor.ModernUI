@@ -16,29 +16,29 @@
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="欢迎光临">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="Introduction" Source="/Pages/Introduction.xaml" />
+                <mui:Link DisplayName="简介" Source="/Pages/Introduction.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="布局">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="Wireframe" Source="/Pages/LayoutWireframe.xaml" />
-                <mui:Link DisplayName="Basic" Source="/Pages/LayoutBasic.xaml" />
-                <mui:Link DisplayName="Split" Source="/Pages/LayoutSplit.xaml" />
-                <mui:Link DisplayName="List" Source="/Pages/LayoutList.xaml"  />
-                <mui:Link DisplayName="Tab" Source="/Pages/LayoutTab.xaml" />
+                <mui:Link DisplayName="布局线框" Source="/Pages/LayoutWireframe.xaml" />
+                <mui:Link DisplayName="基本的" Source="/Pages/LayoutBasic.xaml" />
+                <mui:Link DisplayName="分割" Source="/Pages/LayoutSplit.xaml" />
+                <mui:Link DisplayName="列表" Source="/Pages/LayoutList.xaml"  />
+                <mui:Link DisplayName="选项卡标签" Source="/Pages/LayoutTab.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="控件">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="Styles" Source="/Pages/ControlsStyles.xaml" />
-                <mui:Link DisplayName="Modern controls" Source="/Pages/ControlsModern.xaml" />
+                <mui:Link DisplayName="风格" Source="/Pages/ControlsStyles.xaml" />
+                <mui:Link DisplayName="现代控件" Source="/Pages/ControlsModern.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="先进的(Advanced)">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="DPI awareness" Source="/Pages/DpiAwareness.xaml" />
-                <mui:Link DisplayName="Navigation" Source="/Pages/Navigation.xaml" />
-                <mui:Link DisplayName="Content Loader" Source="/Pages/ContentLoader.xaml" />
+                <mui:Link DisplayName="DPI 感知" Source="/Pages/DpiAwareness.xaml" />
+                <mui:Link DisplayName="导航" Source="/Pages/Navigation.xaml" />
+                <mui:Link DisplayName="内容加载" Source="/Pages/ContentLoader.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="设置" GroupKey="settings">

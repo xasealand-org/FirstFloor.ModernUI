@@ -11,7 +11,7 @@
         <StackPanel MinWidth="200">
 
 
-            <TextBlock Text="SAMPLE FORM" Style="{StaticResource Heading2}" Margin="0,0,0,8" />
+            <TextBlock Text="示例表单" Style="{StaticResource Heading2}" Margin="0,0,0,8" />
             <mui:BBCodeBlock BBCode="A sample form demonstrating various controls with support for validation and focus visualization." Margin="0,0,0,16"/>
 
             <!-- actual form starts here -->
