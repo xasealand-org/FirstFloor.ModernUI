@@ -1,4 +1,5 @@
-﻿using FirstFloor.ModernUI.Windows.Controls;
+﻿using FirstFloor.ModernUI.App.ViewModels;
+using FirstFloor.ModernUI.Windows.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace FirstFloor.ModernUI.App
         public Login()
         {
             InitializeComponent();
+            this.DataContext = new LoginViewModel();
         }
     }
 }

@@ -134,6 +134,7 @@
     <Compile Include="SampleDisabledCommand.cs" />
     <Compile Include="SampleParameterCommand.cs" />
     <Compile Include="SampleMsgBoxCommand.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -482,9 +483,7 @@
   <ItemGroup>
     <Resource Include="Assets\background.snowflakes.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="logo.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
