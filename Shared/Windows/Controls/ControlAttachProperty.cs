@@ -85,6 +85,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
         /// Gets the brush used to draw the mouse over brush.
         /// </summary>
         [AttachedPropertyBrowsableForType(typeof(TextBox))]
+        [AttachedPropertyBrowsableForType(typeof(PasswordBox))]
         //[AttachedPropertyBrowsableForType(typeof(CheckBox))]
         //[AttachedPropertyBrowsableForType(typeof(RadioButton))]
         //[AttachedPropertyBrowsableForType(typeof(DatePicker))]
@@ -132,7 +133,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
             "Label", typeof(string), typeof(ControlAttachProperty), new FrameworkPropertyMetadata(null));
 
         /// <summary>
-        /// 
+        /// 获取Label值
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
@@ -142,7 +143,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
             return (string)d.GetValue(LabelProperty);
         }
         /// <summary>
-        /// 
+        /// 设置Label值
         /// </summary>
         /// <param name="obj"></param>
         /// <param name="value"></param>
@@ -213,7 +214,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
         public static readonly DependencyProperty CornerRadiusProperty = DependencyProperty.RegisterAttached(
             "CornerRadius", typeof(CornerRadius), typeof(ControlAttachProperty), new FrameworkPropertyMetadata(null));
         /// <summary>
-        /// 
+        /// 获取圆角
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
@@ -222,7 +223,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
             return (CornerRadius)d.GetValue(CornerRadiusProperty);
         }
         /// <summary>
-        /// 
+        /// 设置圆角
         /// </summary>
         /// <param name="obj"></param>
         /// <param name="value"></param>
@@ -232,15 +233,15 @@ namespace FirstFloor.ModernUI.Windows.Controls
         }
         #endregion
 
-        #region WatermarkProperty 水印
+        #region 密码长度依赖属性
         /// <summary>
-        /// 水印
+        /// 密码长度
         /// </summary>
         public static readonly DependencyProperty PasswordLengthProperty = DependencyProperty.RegisterAttached(
             "PasswordLength", typeof(int), typeof(ControlAttachProperty), new FrameworkPropertyMetadata(0));
 
         /// <summary>
-        /// 
+        /// 获取密码长度
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -249,7 +250,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
             return (int)obj.GetValue(PasswordLengthProperty);
         }
         /// <summary>
-        /// 
+        /// 设置密码长度
         /// </summary>
         /// <param name="obj"></param>
         /// <param name="value"></param>
@@ -257,7 +258,11 @@ namespace FirstFloor.ModernUI.Windows.Controls
         {
             obj.SetValue(PasswordLengthProperty, value);
         }
-      
+        /// <summary>
+        /// 密码框改变事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private static void PasswordChanged(object sender, RoutedEventArgs e)
         {
             var pb = sender as PasswordBox;
@@ -269,14 +274,14 @@ namespace FirstFloor.ModernUI.Windows.Controls
         }
         #endregion
 
-        #region MyRegion
+        #region 是否监控属性
         /// <summary>
-        /// 
+        /// 是否监控
         /// </summary>
         public static readonly DependencyProperty IsMonitoringProperty =
             DependencyProperty.RegisterAttached("IsMonitoring", typeof(bool), typeof(ControlAttachProperty), new UIPropertyMetadata(false, OnIsMonitoringChanged));
         /// <summary>
-        /// 
+        /// 获取是否监控
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -285,7 +290,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
             return (bool)obj.GetValue(IsMonitoringProperty);
         }
         /// <summary>
-        /// 
+        /// 设置监控
         /// </summary>
         /// <param name="obj"></param>
         /// <param name="value"></param>
@@ -293,6 +298,11 @@ namespace FirstFloor.ModernUI.Windows.Controls
         {
             obj.SetValue(IsMonitoringProperty, value);
         }
+        /// <summary>
+        /// 监控改变事件
+        /// </summary>
+        /// <param name="d"></param>
+        /// <param name="e"></param>
         private static void OnIsMonitoringChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var pb = d as PasswordBox;
@@ -308,10 +318,8 @@ namespace FirstFloor.ModernUI.Windows.Controls
             {
                 pb.PasswordChanged -= PasswordChanged;
             }
-        } 
+        }
         #endregion
-
-
 
     }
 }
