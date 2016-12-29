@@ -44,11 +44,8 @@
             mui:ControlAttachProperty.Watermark="请输入姓名" 
             Style="{StaticResource LabelTextBox}" mui:ControlAttachProperty.Label="姓名："></TextBox>
 
-        <!--<PasswordBox Style="{StaticResource LabelPasswordBox}" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="3"
-                     mui:ControlAttachProperty.Label="密码：" Margin="3" />-->
+        <PasswordBox Style="{StaticResource LabelPasswordBox}" Width="250" Height="30" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="3" 
+            mui:ControlAttachProperty.Label="密码：" mui:ControlAttachProperty.Watermark="请输入密码" Margin="3" />
         
-        <!--<TextBox Width="250" Height="30" Margin="3" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="3"
-            mui:ControlAttachProperty.Watermark="请输入姓名" 
-            Style="{StaticResource LabelTextBox}" mui:ControlAttachProperty.Label="姓名："></TextBox>-->
     </Grid>
 </mui:ModernWindow>

@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using TextBox = System.Windows.Controls.TextBox;
-//using TextBoxBase = System.Windows.Controls.Primitives.TextBoxBase;
+using PasswordBox = System.Windows.Controls.PasswordBox;
 
 namespace FirstFloor.ModernUI.Windows.Controls
 {
@@ -85,11 +85,11 @@ namespace FirstFloor.ModernUI.Windows.Controls
         /// Gets the brush used to draw the mouse over brush.
         /// </summary>
         [AttachedPropertyBrowsableForType(typeof(TextBox))]
-        [AttachedPropertyBrowsableForType(typeof(CheckBox))]
-        [AttachedPropertyBrowsableForType(typeof(RadioButton))]
-        [AttachedPropertyBrowsableForType(typeof(DatePicker))]
-        [AttachedPropertyBrowsableForType(typeof(ComboBox))]
-        [AttachedPropertyBrowsableForType(typeof(RichTextBox))]
+        //[AttachedPropertyBrowsableForType(typeof(CheckBox))]
+        //[AttachedPropertyBrowsableForType(typeof(RadioButton))]
+        //[AttachedPropertyBrowsableForType(typeof(DatePicker))]
+        //[AttachedPropertyBrowsableForType(typeof(ComboBox))]
+        //[AttachedPropertyBrowsableForType(typeof(RichTextBox))]
         public static Brush GetMouseOverBorderBrush(DependencyObject obj)
         {
             return (Brush)obj.GetValue(MouseOverBorderBrushProperty);
@@ -231,5 +231,87 @@ namespace FirstFloor.ModernUI.Windows.Controls
             obj.SetValue(CornerRadiusProperty, value);
         }
         #endregion
+
+        #region WatermarkProperty 水印
+        /// <summary>
+        /// 水印
+        /// </summary>
+        public static readonly DependencyProperty PasswordLengthProperty = DependencyProperty.RegisterAttached(
+            "PasswordLength", typeof(int), typeof(ControlAttachProperty), new FrameworkPropertyMetadata(0));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public static int GetPasswordLength(DependencyObject obj)
+        {
+            return (int)obj.GetValue(PasswordLengthProperty);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="value"></param>
+        public static void SetPasswordLength(DependencyObject obj, int value)
+        {
+            obj.SetValue(PasswordLengthProperty, value);
+        }
+      
+        private static void PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            var pb = sender as PasswordBox;
+            if (pb == null)
+            {
+                return;
+            }
+            SetPasswordLength(pb, pb.Password.Length);
+        }
+        #endregion
+
+        #region MyRegion
+        /// <summary>
+        /// 
+        /// </summary>
+        public static readonly DependencyProperty IsMonitoringProperty =
+            DependencyProperty.RegisterAttached("IsMonitoring", typeof(bool), typeof(ControlAttachProperty), new UIPropertyMetadata(false, OnIsMonitoringChanged));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public static bool GetIsMonitoring(DependencyObject obj)
+        {
+            return (bool)obj.GetValue(IsMonitoringProperty);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="value"></param>
+        public static void SetIsMonitoring(DependencyObject obj, bool value)
+        {
+            obj.SetValue(IsMonitoringProperty, value);
+        }
+        private static void OnIsMonitoringChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var pb = d as PasswordBox;
+            if (pb == null)
+            {
+                return;
+            }
+            if ((bool)e.NewValue)
+            {
+                pb.PasswordChanged += PasswordChanged;
+            }
+            else
+            {
+                pb.PasswordChanged -= PasswordChanged;
+            }
+        } 
+        #endregion
+
+
+
     }
 }
