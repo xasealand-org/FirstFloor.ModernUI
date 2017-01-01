@@ -7,12 +7,13 @@
             <!--<Style TargetType="{x:Type Rectangle}" ></Style> Login  MainWindow -->
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/FirstFloor.ModernUI;component/Assets/Colors.xaml"/>
-                <!--<ResourceDictionary Source="/FirstFloor.ModernUI;component/Themes/Colors.xaml" />-->
                 <ResourceDictionary Source="/FirstFloor.ModernUI;component/Assets/ModernUI.xaml" />
                 <ResourceDictionary Source="/FirstFloor.ModernUI;component/Assets/ModernUI.Light.xaml" />
                 <!--自定义基于ModernUI的样式-->
                 <!--<ResourceDictionary Source="/CustomStyles.xaml"/>-->
             </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="TextBox" BasedOn="{StaticResource DefaultTextBox}"></Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
