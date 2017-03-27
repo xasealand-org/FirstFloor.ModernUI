@@ -26,6 +26,9 @@ namespace FirstFloor.ModernUI.App
         {
             InitializeComponent();
             this.DataContext = new LoginViewModel();
+
+            this.btnLogin.Background= new SolidColorBrush(Color.FromRgb(23, 146, 223));
+            this.btnCancel.Background = new SolidColorBrush(Color.FromRgb(239, 166, 38));
         }
     }
 }
