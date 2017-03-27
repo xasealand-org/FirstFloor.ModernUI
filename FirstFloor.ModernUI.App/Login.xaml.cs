@@ -30,5 +30,13 @@ namespace FirstFloor.ModernUI.App
             this.btnLogin.Background= new SolidColorBrush(Color.FromRgb(23, 146, 223));
             this.btnCancel.Background = new SolidColorBrush(Color.FromRgb(239, 166, 38));
         }
+     
+        #region 窗口拖动
+        private void ModernWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            base.DragMove();//实现整个窗口的拖动
+        } 
+        #endregion
+
     }
 }
